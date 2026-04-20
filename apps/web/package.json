@@ -1,0 +1,17 @@
+{
+    "name": "@challenge/web",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc -p tsconfig.json && vite build",
+        "test": "vitest run",
+        "lint": "eslint src --ext .ts,.tsx"
+    },
+    "dependencies": {
+        "@challenge/contracts": "1.0.0",
+        "react": "19.2.0",
+        "react-dom": "19.2.0"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "@challenge/contracts",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "exports": {
+        ".": "./src/index.ts"
+    },
+    "dependencies": {
+        "zod": "3.25.76"
+    },
+    "scripts": {
+        "lint": "eslint src --ext .ts",
+        "test": "vitest run --passWithNoTests"
+    }
+}

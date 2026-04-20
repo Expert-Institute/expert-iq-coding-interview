@@ -1,0 +1,267 @@
+:root {
+    color-scheme: light;
+    font-family:
+        'IBM Plex Sans',
+        'Avenir Next',
+        sans-serif;
+    background:
+        radial-gradient(circle at top right, rgba(244, 112, 76, 0.18), transparent 30%),
+        linear-gradient(180deg, #f7f1e8 0%, #fbfbfa 42%, #f3f5f7 100%);
+    color: #1f2933;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+.page-shell {
+    min-height: 100vh;
+    padding: 32px;
+}
+
+.filter-card,
+.table-card,
+.flag-card,
+.flag-form {
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(31, 41, 51, 0.09);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(31, 41, 51, 0.08);
+}
+
+.filter-card {
+    display: grid;
+    gap: 20px;
+    padding: 28px;
+    margin-bottom: 24px;
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 12px;
+    color: #b65a35;
+}
+
+h1,
+h2,
+p {
+    margin-top: 0;
+}
+
+.lede {
+    max-width: 56ch;
+    color: #52606d;
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.filters label,
+.flag-form label {
+    display: grid;
+    gap: 8px;
+    color: #334e68;
+}
+
+select,
+input,
+textarea {
+    width: 100%;
+    border: 1px solid #d9e2ec;
+    border-radius: 14px;
+    padding: 12px 14px;
+    background: white;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(300px, 1fr);
+    gap: 24px;
+}
+
+.table-card,
+.flag-card,
+.flag-form {
+    padding: 24px;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: flex-end;
+    margin-bottom: 16px;
+}
+
+.table-meta,
+.muted,
+small {
+    color: #61758a;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: left;
+    vertical-align: top;
+    padding: 16px 12px;
+    border-top: 1px solid #ebeff3;
+}
+
+th:first-child,
+td:first-child {
+    padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+    padding-right: 0;
+    text-align: right;
+}
+
+.pill {
+    display: inline-flex;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.tone-ready {
+    background: #dff3e7;
+    color: #0f6b3f;
+}
+
+.tone-review {
+    background: #fff0d5;
+    color: #9a4f00;
+}
+
+.tone-blocked {
+    background: #fde8e8;
+    color: #b42318;
+}
+
+.primary-button,
+.secondary-button {
+    border: none;
+    border-radius: 999px;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition:
+        transform 120ms ease,
+        box-shadow 120ms ease;
+}
+
+.primary-button {
+    background: linear-gradient(135deg, #c2552d, #ef7d4b);
+    color: white;
+    box-shadow: 0 12px 24px rgba(194, 85, 45, 0.22);
+}
+
+.secondary-button {
+    background: #edf2f7;
+    color: #243b53;
+}
+
+.secondary-button.selected,
+.secondary-button:hover,
+.primary-button:hover {
+    transform: translateY(-1px);
+}
+
+.secondary-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.pager {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.flag-form,
+.flag-card {
+    position: sticky;
+    top: 24px;
+}
+
+.flag-form {
+    display: grid;
+    gap: 16px;
+}
+
+.empty {
+    display: grid;
+    place-items: start;
+    min-height: 220px;
+}
+
+.error-banner,
+.error-text {
+    color: #b42318;
+}
+
+@media (max-width: 900px) {
+    .page-shell {
+        padding: 20px;
+    }
+
+    .filters,
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    table,
+    thead,
+    tbody,
+    tr,
+    th,
+    td {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        padding: 14px 0;
+        border-top: 1px solid #ebeff3;
+    }
+
+    td {
+        border: none;
+        padding: 6px 0;
+        text-align: left;
+    }
+
+    th:last-child,
+    td:last-child {
+        text-align: left;
+    }
+}

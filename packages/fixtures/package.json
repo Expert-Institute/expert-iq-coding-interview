@@ -1,0 +1,16 @@
+{
+    "name": "@challenge/fixtures",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "exports": {
+        ".": "./src/index.ts"
+    },
+    "dependencies": {
+        "@challenge/contracts": "1.0.0"
+    },
+    "scripts": {
+        "lint": "eslint src --ext .ts",
+        "test": "vitest run --passWithNoTests"
+    }
+}
