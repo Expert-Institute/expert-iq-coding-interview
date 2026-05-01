@@ -1,5 +1,5 @@
 import { cloneSeedExperts } from '@challenge/fixtures';
-import type { ReviewStatus } from '@challenge/contracts';
+import type { CreateReviewFlagRequest, ReviewStatus } from '@challenge/contracts';
 
 import type { ExpertRecord } from './types.js';
 
@@ -29,5 +29,24 @@ export class ExpertRepository {
             default:
                 return experts;
         }
+    }
+
+    flagExpert(expertId: string, payload: CreateReviewFlagRequest): ExpertRecord | null {
+        const expert = this.experts.find((candidate) => candidate.id === expertId);
+
+        if (!expert) {
+            return null;
+        }
+
+        expert.reviewFlag = {
+            reason: payload.reason,
+            flaggedBy: payload.flaggedBy,
+            flaggedAt: new Date().toISOString(),
+        };
+
+        return {
+            ...expert,
+            reviewFlag: expert.reviewFlag ? { ...expert.reviewFlag } : null,
+        };
     }
 }

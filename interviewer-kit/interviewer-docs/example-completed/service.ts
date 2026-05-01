@@ -1,4 +1,4 @@
-import type { ExpertSummary, ListExpertsQuery, ListExpertsResponse } from '@challenge/contracts';
+import type { CreateReviewFlagRequest, CreateReviewFlagResponse, ExpertSummary, ListExpertsQuery, ListExpertsResponse } from '@challenge/contracts';
 
 import type { ExpertRepository } from './repository.js';
 
@@ -27,6 +27,18 @@ export class ExpertService {
                 total: reviewScopedExperts.length,
             },
             availableSpecialties,
+        };
+    }
+
+    createReviewFlag(expertId: string, payload: CreateReviewFlagRequest): CreateReviewFlagResponse | null {
+        const expert = this.repository.flagExpert(expertId, payload);
+
+        if (!expert) {
+            return null;
+        }
+
+        return {
+            expert,
         };
     }
 }

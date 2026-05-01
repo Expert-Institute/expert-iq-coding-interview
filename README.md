@@ -3,6 +3,7 @@
 This repo is a self-contained TypeScript workspace for a live, paired senior/staff engineering exercise.
 
 It includes:
+
 - a small API-backed product slice
 - an intentionally realistic codebase with one seeded logic bug
 - a candidate-facing workflow for debugging and feature work
@@ -27,6 +28,5 @@ It includes:
 
 ## Notes
 
-- AI use is allowed in the interview and is explicitly assessed.
 - The seeded bug is part of the exercise. The visible test suite stays green so the challenge is not reduced to "run tests and fix failures."
 - `npm run package:candidate` produces a bundle that excludes `interviewer-kit`.

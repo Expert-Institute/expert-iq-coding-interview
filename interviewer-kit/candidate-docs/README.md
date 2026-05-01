@@ -5,6 +5,7 @@ This exercise is a 60-minute live, paired session in a small product codebase. Y
 ## What to Expect
 
 You will work through three parts:
+
 1. Investigate and fix an existing behavior bug in the expert review queue.
 2. Extend the product with a small new review-flag feature.
 3. Talk through what you cut, what you would want reviewed, and how you would harden the solution.
@@ -12,15 +13,11 @@ You will work through three parts:
 ## What We Are Assessing
 
 We are interested in how you work, not just whether the app ends in a perfect state. We care most about:
+
 - judgment under ambiguity
 - code reading and debugging intuition
 - technical quality and tradeoff awareness
 - communication
-- how you use AI or other tools while working
-
-## Tool Use
-
-You may use whatever tools you would normally use, including AI assistants. AI use is allowed and explicitly assessed. We may ask follow-up questions about what you accepted, rejected, or changed.
 
 ## Setup
 

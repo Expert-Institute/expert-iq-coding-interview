@@ -40,8 +40,12 @@ export const createApp = () => {
             return;
         }
 
-        // TODO: I never completed this, some help would be appreciated!
-        const response = null;
+        const response = service.createReviewFlag(req.params.expertId, payload.data);
+
+        if (!response) {
+            res.status(404).json({ error: 'Expert not found' });
+            return;
+        }
 
         res.status(201).json(createReviewFlagResponseSchema.parse(response));
     });

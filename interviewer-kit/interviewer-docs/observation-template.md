@@ -8,7 +8,6 @@
 
 - First hypothesis:
 - Where they looked first:
-- Whether they read code before asking AI:
 - Root cause explanation quality:
 
 ## Extension Round Notes
@@ -18,14 +17,6 @@
 - API choices:
 - UI/state choices:
 - What they intentionally deferred:
-
-## AI Use Notes
-
-- Tool(s) used:
-- Prompts or tasks given to AI:
-- Output accepted:
-- Output rejected or rewritten:
-- Independent reasoning moments:
 
 ## Reflection Notes
 
