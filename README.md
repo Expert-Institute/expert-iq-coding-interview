@@ -1,32 +1,31 @@
 # Expert Review Challenge
 
-This repo is a self-contained TypeScript workspace for a live, paired senior/staff engineering exercise.
+This exercise is a 20-minute live, paired session in a small product codebase. You will work in your own editor on your own machine and share your screen.
 
-It includes:
+## What to Expect
 
-- a small API-backed product slice
-- an intentionally realistic codebase with one seeded logic bug
-- a candidate-facing workflow for debugging and feature work
-- an interviewer kit with rubric, answer key, and hidden verification assets
+You will be asked a question about this app's behavior, and what code would need to change to change it.
 
-## Workspace
+## What We Are Assessing
 
-- `apps/api` - Express API with Zod validation and Vitest/Supertest
-- `apps/web` - Vite + React + TypeScript frontend
-- `packages/contracts` - shared domain types and schemas
-- `packages/fixtures` - deterministic seed data and in-memory helpers
-- `interviewer-kit` - private interviewer artifacts and hidden tests
+We are interested in how you work, not just whether the app ends in a perfect state. We care most about:
 
-## Scripts
+- judgment under ambiguity
+- code reading and debugging intuition
+- technical quality and tradeoff awareness
+- communication
 
-- `npm install`
-- `npm run dev`
-- `npm run test`
-- `npm run lint`
-- `npm run package:candidate`
-- `npm run test:author`
+## Setup
 
-## Notes
+1. Run `npm install`
+2. Run `npm run dev`
+3. Open the web app at `http://localhost:3000`
 
-- The seeded bug is part of the exercise. The visible test suite stays green so the challenge is not reduced to "run tests and fix failures."
-- `npm run package:candidate` produces a bundle that excludes `interviewer-kit`.
+The API runs locally. No database, Docker, or external services are required.
+
+## Working Style
+
+- Think out loud when you can.
+- Ask clarifying questions when they materially affect your approach.
+- It is fine to make reasonable assumptions and state them.
+- It is fine to leave small polish items unfinished if you can explain the tradeoffs.

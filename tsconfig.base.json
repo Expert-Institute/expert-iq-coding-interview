@@ -9,10 +9,9 @@
         "skipLibCheck": true,
         "resolveJsonModule": true,
         "noUncheckedIndexedAccess": true,
-        "baseUrl": ".",
         "paths": {
-            "@challenge/contracts": ["packages/contracts/src/index.ts"],
-            "@challenge/fixtures": ["packages/fixtures/src/index.ts"]
+            "@challenge/contracts": ["./packages/contracts/src/index.ts"],
+            "@challenge/fixtures": ["./packages/fixtures/src/index.ts"]
         }
     }
 }
