@@ -3,4 +3,8 @@ dist
 coverage
 .DS_Store
 *.log
-interviewer-kit/candidate-bundle
+
+# tsc output emitted next to sources (all source is TypeScript)
+apps/*/src/**/*.js
+apps/*/test/**/*.js
+packages/*/src/**/*.js
